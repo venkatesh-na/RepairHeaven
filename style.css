@@ -1,0 +1,872 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    width:100vw;
+    height: 100vh;
+    overflow-x:hidden;
+    background-color:rgb(254, 254, 255);
+}
+img
+{
+    width:100px;
+    height:100px;
+}
+.home
+{
+    height: 100vh;
+}
+
+.home header
+{
+    
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 10%;
+    
+   
+}
+.home header h1
+{
+    padding-left: 100px;
+
+}
+.home header ul
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    padding-right: 100px;
+    position: relative;
+    
+}
+.home header ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+.home header ul li 
+{
+    text-align: center;
+    padding:5px 0;  
+    min-width: 100px;
+}
+.home header ul li:hover
+{
+    background-color:rgb(54, 54, 228);
+    transition: all 0.5s ease-out;
+    border-radius: 1rem;
+}
+.home header ul li:hover a
+{
+    color:white;
+}
+.home header div
+{
+    min-width:30px;
+    min-height:30px;
+    position: fixed;
+    border-radius:50%;
+    margin-right:100px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 3;
+    background-color: white;
+}
+.locationToHome
+{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 3;
+    font-size: 3rem;
+    height: 40px;
+}
+
+.home main
+{   
+    height: 90%;
+    display: flex;
+    overflow: hidden;
+}
+.home main .page1,
+.home main .page2
+{
+    height: 90vh; 
+    width: 100vw; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.home main .page1 > div:nth-child(1),
+.home main .page2 > div:nth-child(1)
+
+{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    padding-left: 100px;
+    width: 50vw
+}
+.home main .page1 > div:nth-child(2),
+.home main .page2 > div:nth-child(2)
+{
+    position:relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-right:100px;
+    width: 50vw;
+    z-index: -2;
+}
+.home main .page1 > div:nth-child(2) svg,
+.home main .page2 > div:nth-child(2) svg
+{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-62%, -48%);
+    z-index: -3;
+    width:876px;
+    height: 870px;
+}
+.home main h1 
+{
+    font-size:4rem;
+    margin:1.4rem 0px;
+    
+}
+.home main h4
+{
+    color:rgb(54, 54, 228);
+    position: relative;
+    bottom:-1.1rem;
+    
+}
+.home main a
+{
+    background-color: rgb(54, 54, 228);
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border:none;
+    outline:none;
+    
+}
+@keyframes aniText
+{
+    from{transform: translateY(4rem); opacity: 0;}
+    to{transform: translateY(0); opacity: 1;}
+}
+@keyframes aniImg
+{
+    from{transform:scale(0.9); opacity: 0;}
+    to{transform:scale(1); opacity:1}
+}
+.addTextAnimation
+{
+    animation: aniText 0.7s ease-in 1;
+}
+.addImageAnimation
+{
+    animation:aniImg 0.7s ease-in 1;
+}
+.home main a:hover
+{
+    color:white;
+    background: transparent;
+    outline: 2px solid rgb(54, 54, 228);
+}
+.home main a:active
+{
+transform: scale(0.8);
+}
+.home img
+{
+    width: 400px;
+    height:500px;
+    z-index:-1;
+
+}
+.home .home-slide
+{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom: 2rem;
+    width: 50px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .home-slide .prev, .next
+{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border:1px solid black;
+    margin:0px 5px;
+}
+
+.services
+{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.services .service-header
+{
+    width: 100%;
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.services .service-header h4
+{
+    color:rgb(54, 54, 228);
+}
+.services .inner-services
+{
+    height: 80%;
+    width: 60vw;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    /* auto-fill will create a extra column if we have extra spaces so instead use auto-fit */
+    /* min max means suppose we need our div to have minimum of 250px and as soon as it has more space its maximum with will be 1fr */
+}
+.services .inner-services > div
+{
+    
+    width: 250px;
+    max-height: 250px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    justify-self:center;
+    align-self:center;
+    background-color:rgb(246, 246, 252);
+    box-shadow: 0px 0px 1px 1px rgb(54, 54, 228);
+    padding:30px;
+    border-radius:1rem;
+}
+.services .inner-services > div > div img
+{
+   height:40px;
+   width:40px;
+}
+.services .inner-services > div > a
+{
+    text-decoration: none;
+    color:rgb(54, 54, 228);
+    font-size: 0.7rem;
+    outline:1px solid rgb(54, 54, 228);
+    padding: 5px 15px;
+    margin:10px 0px;
+}
+.services .inner-services > div > a:hover
+{
+    color:white;
+    background-color:rgb(54, 54, 228);
+    border:none;
+}
+.services .inner-services > div > p
+{
+    text-align:center;
+}
+.services .inner-services > div > h1
+{
+    margin:7px 0px;
+}
+
+.BookAppoint
+{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+}
+.BookAppoint > div:nth-child(1)
+{
+     width: 50vw;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     justify-self: center;
+     align-self: center;
+}
+.BookAppoint > div:nth-child(1) img
+{
+    width:80%;
+    height:60%;
+}
+
+.BookAppoint > div:nth-child(2)
+{
+    width: 50vw;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+}
+.BookAppoint > div:nth-child(2) > div:nth-child(1)
+{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+.BookAppoint > div:nth-child(2) > div:nth-child(1) h4
+{
+    color:rgb(54, 54, 228);
+}
+.BookAppoint > div:nth-child(2) > div:nth-child(2)
+{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.BookAppoint > div:nth-child(2) form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 1rem;
+    
+}
+.BookAppoint > div:nth-child(2) form select
+{
+    width: 100%;
+    height: 3rem;
+    margin:1rem 0;
+    border:none;
+    outline:none;
+    border-radius: 0.5rem;
+    padding-left: 0.7rem;
+    background-color:rgb(235, 235, 255);
+}
+.BookAppoint > div:nth-child(2) form a
+{
+    background-color: rgb(54, 54, 228);
+    text-decoration: none;
+    line-height:3rem;
+    color:white;
+    width:80%;
+    text-align: center;
+    margin:1rem 0;
+    border:none;
+    outline: none;
+}
+.BookAppoint > div:nth-child(2) form a:hover
+{
+    background-color: rgb(246, 246, 252);
+    outline: 2px solid rgb(54, 54, 228);
+    color:rgb(54, 54, 228);
+}
+.BookAppoint > div:nth-child(2) form a:active
+{
+    transform: scale(0.8);
+}
+.BookAppoint > div:nth-child(2) form textarea
+{
+    width: 100%;
+    height: 8rem;
+    border:none;
+    outline:none;
+    resize: none;
+    border-radius: 0.5rem;
+    padding:0.7rem 0 0 1rem;
+    margin:1rem 0;
+    background-color:rgb(235, 235, 255); 
+}
+.BookAppoint > div:nth-child(2) form  div
+{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin:1rem 0;
+  
+}
+.BookAppoint > div:nth-child(2) form .name, .vehicleNo, .date, .time
+{
+    width:48%;
+    height: 3rem;
+    border:none;
+    outline: none;
+    border-radius: 0.5rem;
+    padding-left:1rem;
+    background-color:rgb(235, 235, 255);
+}
+.BookAppoint > div:nth-child(2) form select:focus, .vehicleNo:focus, .date:focus, .time:focus
+{
+    /* there is nothing like outline radius so im using box-shadow */
+    box-shadow: 0px 0px 1px 1px  rgb(54, 54, 228);
+}
+/*i have sepeareted this becuase its not woring when i put together in above selector */
+.BookAppoint > div:nth-child(2) form .name:focus
+{
+    box-shadow: 0px 0px 1px 1px  rgb(54, 54, 228);
+}
+.BookAppoint > div:nth-child(2) form textarea:focus
+{
+    box-shadow: 0px 0px 1px 1px  rgb(54, 54, 228);
+}
+.testimonial
+{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.testimonial > div:nth-child(1)
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20%;
+}
+.testimonial > div:nth-child(1) h4
+{
+    color:rgb(54, 54, 228);
+}
+.testimonial .inner-testimonies
+{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    overflow:hidden;
+    position: relative;
+    top:-70px;
+}
+.testimonial .inner-testimonies div > div:nth-child(1) > div:nth-child(1)
+{
+   width: 50px;
+   height: 50px;
+   margin-right: 0.6rem;
+}
+.testimonial .inner-testimonies img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.testimonial .inner-testimonies > div
+{
+    min-width:272px;
+    height: 300px;
+    box-shadow:0px 0px 1px 1.2px rgb(54, 54, 228);
+    margin:1rem;
+    padding: 0.5rem;
+    background-color: rgb(246, 246, 252);
+    transition:all 0.5s linear;
+}
+.testimonial .inner-testimonies div > div:nth-child(1)
+{
+    display: flex;
+    align-items: center;
+}
+.testimonial .inner-testimonies > div:nth-child(1)
+{
+   
+}
+.testimonial .check i
+{
+    margin-left: 5px;
+    font-size: 0.5rem;
+    color:white;
+    background-color: blue;
+    padding: 2px;
+    border-radius: 50%;
+}
+.testimonial .slide
+{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom: 10rem;
+    width: 50px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial .slide .prev,.next
+{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border:1px solid black;
+    margin:0px 5px;
+}
+.price
+{
+    width: 100vw;
+    height:100vh;
+}
+.price > div:nth-child(1)
+{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+.price > div:nth-child(1) h4
+{
+    color:rgb(54, 54, 228);
+}
+.price .inner-price
+{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    position: relative;
+    top:-70px;
+}
+.price .inner-price div
+{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    box-shadow:0px 0px 1px 1.2px rgb(54, 54, 228);
+    width: 230px;
+    height: 320px;
+    margin:1rem;
+    padding: 10px;
+    background-color: rgb(246, 246, 252);
+}
+.price .inner-price div p:first-of-type
+{
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    color:rgb(54, 54, 228);
+}
+.price .inner-price div p:first-of-type span
+{
+    position: absolute;
+    top: 1px;
+    left:-7px;
+    font-size:0.9rem;
+}
+.price .inner-price div p:last-of-type
+{
+    text-align: center;
+}
+.price a
+{
+   text-decoration: none;
+    background-color:rgb(54, 54, 228);
+    color:white;
+    padding: 7px 25px;
+    border:none;
+    outline: none;
+}
+.price a:hover
+{
+    outline:2px solid rgb(54, 54, 228);
+    background-color:rgb(246, 246, 252);
+    color:rgb(54, 54, 228);
+}
+footer
+{
+    width: 100%;
+   height: 70vh;
+   background-color: rgb(0, 0, 0);
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
+}
+footer > div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 70%;
+}
+footer > div > div
+{
+    
+    min-width: 350px;
+   display: flex;
+   justify-content:flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+   height: 70%;
+}
+footer > div > div:first-of-type p
+{
+    margin:1.5rem 0;
+    width: 230px;
+    color:rgba(255, 255, 255, 0.781);
+}
+footer > div > div:first-of-type ul
+{  
+    list-style: none;
+    display:flex;
+    width: 60%;
+}  
+footer > div > div:first-of-type ul li
+{
+    width: 30px;
+    height:30px;
+    background-color: rgb(78, 78, 78);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin-right: 1rem;
+}
+
+footer > div > div:first-of-type ul li a
+{
+    color:white;
+}
+footer > div > div:nth-child(2) > div > p
+{
+    margin: 1.5rem 0;
+    width: 230px;
+    color:rgba(255, 255, 255, 0.781);   
+}
+footer > div > div:nth-child(2) > div p span
+{
+    margin-right: 20px;
+}
+footer > div > div:last-of-type > div
+{
+    margin-top: 1.5rem;
+}
+footer > div > div:last-of-type p
+{
+    margin-left:2rem;
+    color:rgba(255, 255, 255, 0.781);
+}
+@media screen and (max-width:1260px)
+{
+    .BookAppoint
+    {
+        position: relative;
+        grid-template-columns: 1fr;
+    }
+    .BookAppoint > div:nth-child(2)
+    {
+        width: 100vw;
+    }
+    .BookAppoint > div:nth-child(1)
+    {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.2;
+        width: 100vw;
+    }
+    .services
+    {
+        height: auto;
+    }
+    .services .service-header
+    {
+        margin:2rem 0;
+    }
+    .services .inner-services
+    {
+        grid-gap:2rem;
+        margin-bottom: 2rem;
+    }
+    .testimonial .inner-testimonies
+    {
+        width:100%;
+        overflow: scroll;
+    }
+    .testimonial .inner-testimonies::-webkit-scrollbar
+    {
+        width:0px;
+    }
+    
+    .price
+    {
+       height: auto;
+    }
+    .price .inner-price
+    {
+        height: auto;
+        top:0;
+        margin-bottom: 2rem;
+    }
+    .price > div:nth-child(1)
+    {
+        margin: 2rem 0;
+    }
+    footer
+    {
+      height:auto;
+    }
+    footer > div > div
+    {
+        margin:2rem 0;
+    }
+    footer > p
+    {
+        margin: 5rem 2rem;
+    }
+}
+@media screen and (max-width:880px)
+{
+    .home header > div
+    {
+        display: flex;
+    }
+    .home header ul
+    {
+        display: block;
+        flex-direction: column;
+        top:0;
+        left: 0;
+        height:100vh;
+        position: fixed;
+        background-color: rgb(1, 1, 7);
+        padding-right: 0;
+        z-index: 1;
+        width: 70vw;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition:all 0.3s linear;
+    }
+    .home header ul::before
+    {
+        content:"RepairHeaven";
+        color:white;
+        display: block;
+        padding:1rem 0.5rem;
+        font-size: 1.5rem;
+    }
+    .home header .showUl
+    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .home header .showUl li a
+    {
+        color:white;
+    }
+    .rotateBar
+    {
+        transform: rotateZ(90deg);
+    }
+    .locationToHome
+    {
+        display: none;
+    }
+}
+@media screen and (max-width:830px)
+{
+    .home header div
+    {
+        margin-right: 2rem;
+    }
+    .home header h1
+    {
+        padding-left:2rem;
+    }
+    .home main .page1, .home main .page2
+    {
+        position: relative;
+    }
+    .home main .page1 > div:nth-child(1), 
+    .home main .page2 > div:nth-child(1)
+    {
+        width:100vw;
+        padding:2rem 2rem;
+        color:white;
+        backdrop-filter: blur(2px) brightness(70%);
+        z-index: 1;
+    }
+    .home main .page1 > div:nth-child(2), 
+    .home main .page2 > div:nth-child(2)
+    {
+        padding-right:0;
+        width:100vw;
+        height: 100vh;
+        position: absolute;
+        left:0;
+        top:0;
+    }
+    .home img
+    {
+        width:100%;
+        height:100%;
+        z-index:-1;
+    }
+    .services .inner-services
+    {
+        width:100vw;
+    }
+    footer > div > div
+    {
+        align-items: center;
+    }
+    .home main .page1 > div:nth-child(2) svg,
+    .home main .page2 > div:nth-child(2) svg
+    {
+        display: none;
+    }
+    .home img
+    {
+        animation: none;
+        /*we dont need animation when th wwebsite is mobile responsive */
+    }
+}
+@media screen and (max-width:540px)
+{
+    .testimonial .inner-testimonies > div
+    {
+       min-width:92%;
+    }
+}
