@@ -25,6 +25,7 @@ img
 .home
 {
     height: 100vh;
+   
 }
 
 .home header
@@ -39,6 +40,7 @@ img
 .home header h1
 {
     padding-left: 100px;
+    color:black;
 
 }
 .home header ul
@@ -299,6 +301,8 @@ transform: scale(0.8);
 .services .inner-services > div > h1
 {
     margin:7px 0px;
+    width: 100%;
+    text-align: center;
 }
 
 .BookAppoint
@@ -612,7 +616,7 @@ transform: scale(0.8);
 }
 footer
 {
-    width: 100%;
+    width: 100vw;
    height: 70vh;
    background-color: rgb(0, 0, 0);
    color: white;
@@ -620,7 +624,7 @@ footer
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   
+   overflow: hidden;/*becuase the divs are going out of the footer because of animation through aos library so that overflow to not affect the width i have use overflow hidden in footer */
 }
 footer > div
 {
