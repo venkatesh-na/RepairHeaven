@@ -13,6 +13,8 @@ const mainh1 = document.querySelectorAll(".home main h1")
 const mainh4 = document.querySelectorAll(".home main h4")
 const maina = document.querySelectorAll(".home main a")
 const mainimg = document.querySelectorAll(".home main img")
+const homeHeader = document.querySelector(".home header")
+const homeHeaderh1 = document.querySelector(".home header h1")
 bar.style.transition = "transform 0.3s linear";
 
 function pageAnimation()
@@ -52,7 +54,20 @@ bar.addEventListener("click",toggleLink)
 document.addEventListener("DOMContentLoaded",()=>{
     pageAnimation();
 })
+document.addEventListener("scroll",(e)=>{
+    console.log(window.pageYOffset)
+    if(window.pageYOffset > 90)
+    {
+        homeHeader.style.backgroundColor = "white"
+        homeHeaderh1.style.color = "black"
 
+    }
+    else
+    {
+        homeHeader.style.backgroundColor = "transparent"
+        homeHeaderh1.style.color = "white"
+    }
+})
 function testSlideLeft()
 {   
     divOfInnerTest.forEach((e)=>{
