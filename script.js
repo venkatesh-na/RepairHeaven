@@ -16,6 +16,12 @@ const mainimg = document.querySelectorAll(".home main img")
 const homeHeader = document.querySelector(".home header")
 const homeHeaderh1 = document.querySelector(".home header h1")
 bar.style.transition = "transform 0.3s linear";
+const mediaQuery = window.matchMedia("(min-width: 830px)")
+if(mediaQuery.matches)
+{
+    //means if width of an widnow greate than 830px than the color of h1 will be black
+    homeHeaderh.style.color = "black"
+}
 
 function pageAnimation()
 {
