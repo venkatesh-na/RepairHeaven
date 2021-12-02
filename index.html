@@ -11,24 +11,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<section class = "home" id = "home">
-    <header>
-        <h1>RepairHeaven</h1>
-        <ul>
-            <li><a href = "#home">Home</a></li>
-            <li><a href = "#services">Service</a></li>
-            <li><a href = "#Appointment">Appointment</a></li>
-            <li><a href = "#testimonial">Tesimonial</a></li>
-            <li><a href = "#price">Price</a></li>
-        </ul>
-        <div>
-            <i class = "fa fa-bars"></i>
-        </div>
-    </header>
-    <main>
+    <section class = "home" id = "home">
+        <header>
+            <h1>RepairHeaven</h1>
+            <ul>
+                <li><a href = "#home">Home</a></li>
+                <li><a href = "#services">Service</a></li>
+                <li><a href = "#Appointment">Appointment</a></li>
+                <li><a href = "#testimonial">Tesimonial</a></li>
+                <li><a href = "#price">Price</a></li>
+            </ul>
+            <div>
+                <i class = "fa fa-bars"></i>
+            </div>
+        </header>
+        <main>
         <article class = "page1">
             <div>
                 <div>
@@ -305,11 +305,19 @@
             </div>
             <div data-aos = "fade-right">
                 <h3>Contact Information</h3>
-                <div>
-                    <p><span><i class="fa fa-location"></i></span>203 Fake St. Mountain View, San Francisco, California, USA</p>
-                    <p><span><i class = "fa fa-phone"></i></span>+2 392 3929 210
-                    </p>
-                    <p><span><i class="fa fa-paper-plane"></i></span>info@yourdomain.com</p>
+                <div class = "contact-information">
+                    <div>
+                        <i class= "fa fa-map-marker"></i>
+                        <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
+                    </div>
+                    <div>
+                        <i class = "fa fa-phone"></i>
+                        <p>+2 392 3929 210</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-paper-plane"></i>
+                        <p>info@yourdomain.com</p>
+                    </div>
                 </div>
             </div>  
             <div data-aos = "fade-left">
@@ -336,7 +344,7 @@
          <script>
            AOS.init({
             duration:700,
-            offset:200
+            offset:100
            });
          </script>
 </body>
